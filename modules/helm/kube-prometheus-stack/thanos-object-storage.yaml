@@ -2,6 +2,7 @@
 
 type: s3
 config:
-  bucket: "thanos-bucket--${var.cluster_id}"
+  #using output bucket name from s3 bucket module
+  bucket: ${bucket_name}
   endpoint: "s3.${var.region}.amazonaws.com"
   region: "${var.region}"
