@@ -1,0 +1,7 @@
+# Thanos sidecar objectStorageConfig
+
+type: s3
+config:
+  bucket: "thanos-bucket"
+  endpoint: "s3.${var.region}.amazonaws.com"
+  region: "${var.region}"
