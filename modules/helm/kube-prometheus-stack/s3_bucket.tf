@@ -1,6 +1,6 @@
 #S3 bucket for thanos long term storage
 resource "aws_s3_bucket" "thanos_bucket" {
-  bucket = "thanos-bucket"
+  bucket = "thanos-bucket-${var.cluster_id}"
   tags = {
     Name = "thanos-bucket"
   }
