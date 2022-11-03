@@ -1,6 +1,8 @@
 # Terraform to deploy kube-prometheus-stack in AWS EKS using Helm chart
 
-This repository if forked from hashicorp/learn-terraform-provision-eks-cluster and modified to deploy kube-prometheus-stack in EKS using Helm chart.
+This repository is forked from hashicorp/learn-terraform-provision-eks-cluster and modified to deploy kube-prometheus-stack in EKS using Helm chart.
+
+> Note: This repository is only for learning purposes. It is not recommended to use this in production.
 
 ## Sample output after terraform apply
 
