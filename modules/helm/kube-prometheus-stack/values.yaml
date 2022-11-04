@@ -519,10 +519,10 @@ prometheus:
     thanos: {
         version: "v0.20.2",
         objectStorageConfig: {
-          name: "thanos-objectstorage",
+          name: "thanos-object-storage",
           key: "thanos.yaml",
         },
-        baseImage: "quay.io/thanos/thanos"
+        baseImage: "quay.io/thanos/thanos",
     }
 
       # secretProviderClass:
