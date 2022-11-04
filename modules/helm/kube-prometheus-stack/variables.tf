@@ -18,6 +18,6 @@ variable "cluster_id" {
 variable "bucket_name" {
   description = "S3 bucket name for thanos long term storage"
   type        = string
-  default = "thanos-bucket"
+  default = "thanos-bucket-33121"
   
 }
