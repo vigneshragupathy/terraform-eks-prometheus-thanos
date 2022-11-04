@@ -3,6 +3,6 @@
 type: s3
 config:
   #using output bucket name from s3 bucket module
-  bucket: ${bucket_name}
+  bucket: module.s3_bucket.output.s3_bucket_name
   endpoint: "s3.${var.region}.amazonaws.com"
   region: "${var.region}"
