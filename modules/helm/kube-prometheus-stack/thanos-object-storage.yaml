@@ -4,4 +4,4 @@ type: s3
 config:
   #using output bucket name from s3 bucket module
   bucket: var.bucket_name
-  endpoint: "s3.${var.region}.amazonaws.com"
+  endpoint: "s3.us-east-2.amazonaws.com"
