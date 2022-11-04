@@ -5,6 +5,6 @@ resource "kubernetes_secret" "generic" {
     namespace = var.namespace
   }
   data = {
-    "thanos.yaml" = filebase64("${path.module}/thanos-object-storage.yaml")
+    "thanos.yaml" = file("${path.module}/thanos-object-storage.yaml")
   }
 }
