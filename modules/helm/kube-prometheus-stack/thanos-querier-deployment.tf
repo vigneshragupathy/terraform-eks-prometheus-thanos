@@ -5,11 +5,5 @@ data "kubectl_file_documents" "thanosquerierdeployment" {
 }
 
 resource "kubernetes_manifest" "thanosquerierdeployment" {
-  for_each = toset(data.kubectl_file_documents.thanosquerierdeployment.documents)
-  manifest = yamldecode(each.value)
-  depends_on = [
-    kubernetes_secret.generic,
-    helm_release.prometheus,
-    aws_s3_bucket.prometheus
-  ]
+  yaml_body = yamldecode(data.kubectl_file_documents.thanosquerierdeployment.documents[0])
 }
