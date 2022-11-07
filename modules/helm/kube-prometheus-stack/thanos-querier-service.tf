@@ -1,6 +1,6 @@
 # Terraform file to deploy thanos querier service
 
-data "kubectl_file_documents" "thanosquerierservice" {
+/*data "kubectl_file_documents" "thanosquerierservice" {
   content = file("${path.module}/thanos-querier-service.yaml")
 }
 
@@ -12,4 +12,4 @@ resource "kubernetes_manifest" "thanosquerierservice" {
     helm_release.prometheus,
     kubernetes_manifest.thanosquerierdeployment
   ]
-}
+}*/

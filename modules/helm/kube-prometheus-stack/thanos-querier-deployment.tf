@@ -1,6 +1,6 @@
 # Terraform file to deploy thanos querier deployment
 
-data "kubectl_file_documents" "thanosquerierdeployment" {
+/*data "kubectl_file_documents" "thanosquerierdeployment" {
   content = file("${path.module}/thanos-querier-deployment.yaml")
 }
 
@@ -11,4 +11,4 @@ resource "kubernetes_manifest" "thanosquerierdeployment" {
     kubernetes_secret.generic,
     helm_release.prometheus
   ]
-}
+}*/
