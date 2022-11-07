@@ -20,8 +20,6 @@ spec:
         image: thanosio/thanos:v0.17.2
         args:
         - query
-        - --http-address=0.0.0.0:9090
-        - --grpc-address=0.0.0.0:10901
         - --query.replica-label=prometheus_replica
         - --store=dnssrv+_grpc._tcp.kube-prometheus-stack-prometheus-thanos-discovery.monitoring.svc.cluster.local
         ports:
