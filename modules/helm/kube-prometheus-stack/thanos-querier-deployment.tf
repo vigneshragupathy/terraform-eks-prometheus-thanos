@@ -9,6 +9,7 @@ resource "kubernetes_manifest" "thanosquerierdeployment" {
   manifest = yamldecode(each.value)
   depends_on = [
     kubernetes_secret.generic,
-    helm_release.prometheus
+    helm_release.prometheus,
+    aws_s3_bucket.prometheus
   ]
 }
