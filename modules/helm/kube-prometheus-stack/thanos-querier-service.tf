@@ -8,11 +8,6 @@ resource "kubectl_manifest" "thanosquerierservice" {
     yaml_body = <<YAML
     apiVersion: v1
     kind: Service
-    metadata:
-        name: thanos-query
-        namespace: monitoring
-        labels:
-            app: thanos-querier
     spec:
         type: ClusterIP
         ports:
