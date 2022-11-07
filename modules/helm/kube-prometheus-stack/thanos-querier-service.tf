@@ -6,6 +6,20 @@ data "kubectl_file_documents" "thanosquerierservice" {
 
 resource "kubectl_manifest" "thanosquerierservice" {
     yaml_body = <<YAML
-    ${data.kubectl_file_documents.thanosquerierservice.documents[0]}
+    apiVersion: v1
+    kind: Service
+    metadata:
+    name: thanos-querier
+    namespace: monitoring
+    labels:
+        app: thanos-querier
+    spec:
+    type: ClusterIP
+    ports:
+    - name: http
+        port: 9090
+        targetPort: http
+    selector:
+        app: thanos-querier
     YAML
 }
