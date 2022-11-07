@@ -5,5 +5,7 @@ data "kubectl_file_documents" "thanosquerierservice" {
 }
 
 resource "kubectl_manifest" "thanosquerierservice" {
-    yaml_body = yamldecode(data.kubectl_file_documents.thanosquerierservice.documents[0])
+    yaml_body = <<YAML
+    ${data.kubectl_file_documents.thanosquerierservice.documents[0]}
+    YAML
 }
