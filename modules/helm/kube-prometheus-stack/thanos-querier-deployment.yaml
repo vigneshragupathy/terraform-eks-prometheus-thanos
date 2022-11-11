@@ -21,7 +21,8 @@ spec:
         args:
         - query
         - --query.replica-label=prometheus_replica
-        - --store=dnssrv+_grpc._tcp.kube-prometheus-stack-prometheus-thanos-discovery.monitoring.svc.cluster.local
+        #- --store=dnssrv+_grpc._tcp.${kube-prometheus-stack.fullname}-thanos-discovery.${namespace}.svc.cluster.local
+        - --store=dnssrv+_grpc._tcp.kube-prometheus-stack-thanos-discovery-grpc.monitoring.svc.cluster.local
         ports:
         - containerPort: 9090
           name: http
